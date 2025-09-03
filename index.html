@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forbatt SA | Tebogo Masia</title>
+
+    <!--my custom css-->
+    <link rel="stylesheet" href="css/styles.css">
+
+      <!--Font Awesome for Footer icons-->
+  <script src="https://kit.fontawesome.com/aee4127ff1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!--Navbar-->
+    <header>
+            <!--Company logo-->
+            <div class="logo">
+                <img src="img/logo.webp" alt=" Forbatt SA Logo" srcset="">
+            </div>
+            <!--Hamburger-->
+            <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+            </div>
+
+            <!--Nav Links (used for both desktop & mobile)-->
+            <nav class="nav-links" id="navLinks">
+                <a href="#">Home</a>
+
+                <!-- Products with Submenu -->
+                <div class="dropdown">
+                    <button class="dropbtn">Products</button>
+                    <div class="dropdown-content">
+                    <!-- First level submenu -->
+                    <div class="submenu-item">
+                        <button>Brands</button>
+                        <div class="submenu">
+                        <a href="#">Forbatt</a>
+                        <a href="#">Outdo</a>
+                        <a href="#">Tiandy</a>
+                        </div>
+                    </div>
+
+                    <div class="submenu-item">
+                        <button>Brand Categories</button>
+                        <div class="submenu">
+                        <!-- Nested submenu -->
+                        <div class="submenu-item">
+                            <button>Surveillance</button>
+                            <div class="submenu">
+                            <a href="#">Cameras</a>
+                            <a href="#">NVRs</a>
+                            </div>
+                        </div>
+                        <div class="submenu-item">
+                            <button>Power</button>
+                            <div class="submenu">
+                            <a href="#">Batteries</a>
+                            <a href="#">Inverters</a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <a href="#">Solution</a>
+                <a href="#">About</a>
+                <a href="#">Resources</a>
+                <a href="#">Contact</a>
+                <a class="cta-button primary" href="#">Register</a>
+            </nav>
+    </header>
+    <main>
+        <!--hero-->
+        <section class="hero">
+            <div class="hero-content">
+                <h3>Empowering South Africa</h3>
+                <h1>Reliable Tech for Homes & Businesses</h1>
+                <p>Trusted batteries, solar, and security solutions that keep you connected.</p>
+
+                <div class="button-container">
+                    <button class="cta-button primary">Explore Products</button>
+                    <button class="cta-button secondary">Discover Forbatt SA</button>                    
+                </div>
+            </div>
+        </section>
+
+        <!--trusted brands section-->
+        <section>
+            <h3><em>Trusted by leading brands</em></h3>
+            <div class="trusted-brands">
+                <div class="trusted-brands-track">
+                    <div class="trusted-brands-logo"><img src="img/brand-logos/FORBATT-BATTERIES-HIGH-RES-1024x240.png" alt="Forbatt Batteries logo"></div>
+                    <div class="trusted-brands-logo"><img src="img/brand-logos/outdo-Logo.webp" alt="OUTDO logo"></div>
+                    <div class="trusted-brands-logo"><img src="img/brand-logos/tiandy-logo.webp" alt="Tiandy logo"></div>
+                    <div class="trusted-brands-logo"><img src="img/brand-logos/vacron-logo.png" alt="Vacron logo"></div>
+                    <div class="trusted-brands-logo"><img src="img/brand-logos/nuuo-logo-cliped.jpg" alt="NUUO logo"></div>
+
+                    <!-- Duplicate logos for seamless loop -->
+                    <div class="trusted-brands-logo"><img src="img/brand-logos/FORBATT-BATTERIES-HIGH-RES-1024x240.png" alt="Forbatt Batteries logo"></div>
+                    <div class="trusted-brands-logo"><img src="img/brand-logos/outdo-Logo.webp" alt="OUTDO logo"></div>
+                    <div class="trusted-brands-logo"><img src="img/brand-logos/tiandy-logo.webp" alt="Tiandy logo"></div>
+                    <div class="trusted-brands-logo"><img src="img/brand-logos/vacron-logo.png" alt="Vacron logo"></div>
+                    <div class="trusted-brands-logo"><img src="img/brand-logos/nuuo-logo-cliped.jpg" alt="NUUO logo"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best seller section -->
+         <section id="bestseller-section">
+            <h2>Our Best Sellers</h2>
+            <p>Discover the most trust products powering businesses and home across South Africa.</p>
+                <div class="bestsell-container">
+                    <!--Card 1-->
+                    <div class="bestsell-card">
+                        <div class="card-img">
+                            <a href="#"><img src="img/products/ping_crystalTitan_tower.jpg" alt="Crystal Titan Linux 4 Bay Tower"></a>
+                        </div>
+                        <div class="card-body">
+                            <h3><a href="#">NUUO</a></h3>
+                            <h4>Crystal Titan Linux Tower</h4>
+                            <p id="text">TR-0400CT-US (EU/ AU/ UK/ JP)</p>
+                            <p id="text">NUUO Crystal Titan Linux</p>
+                            <ul>
+                                <li>4 Bay Tower (expandable to 64 camera licenses)</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <button class="cta-button primary">Request Quote</button>
+                        </div>
+                    </div>
+
+                    <!--Card 2-->
+                    <div class="bestsell-card">
+                        <div class="card-img">
+                            <a href="#"><img src="img/products/FB8-12G-12V8AH-GEL.png" alt="Forbatt FB8-12G-12V8AH-GEL"></a>
+                        </div>
+                        <div class="card-body">
+                            <h3><a href="#">Forbatt</a></h3>
+                            <h4>AGM 12V Gel - 8AH</h4>
+                            <p id="text">FB12 8G</p>
+                            <p id="text">APPLICATIONS</p>
+                            <ul>
+                                <li>Solar Applications | Gate Motor | UPS</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <button class="cta-button primary">Request Quote</button>
+                        </div>
+                    </div>
+
+                    <!--Card 3-->
+                    <div class="bestsell-card">
+                        <div class="card-img">
+                            <a href="#"><img src="img/products/IPC2253-FNB-PIR40.jpg" alt=""></a>
+                        </div>
+                        <div class="card-body">
+                            <h3><a href="#">Kedacom</a></h3>
+                            <h4>IPC2251-FNB-SIR80-Z6048</h4>
+                            <p id="text">Motorized Zoom Bullet Camera</p>
+                            <p id="text">2MP Starlight</p>
+                            <ul>
+                                <li>4 Bay Tower (expandable to 64 camera licenses)</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <button class="cta-button primary">Request Quote</button>
+                        </div>
+                    </div>
+                </div>
+         </section>
+
+         <!--About Forbatt Summary Section-->
+         <section id="about">
+            <h2>Trusted Technology, Powered by Forbatt SA</h2>
+            <p>Exclusive brands. Reliable solutions. A partner you can count on for energy, surveillance, and access control.</p>
+            <div class="about-container">
+                <div class="text-section">
+                    <h3>About Forbatt</h3>
+                    <p>
+                        Forbatt SA is your trusted partner in energy solutions, video 
+                        surveillance, access control, and installation accessories. 
+                        As the exclusive agent and official distributor of leading global 
+                        brands, we bring innovation, reliability, and quality to every 
+                        product we deliver. Our mission is simple: empower businesses 
+                        and homes across South Africa with technology that works 
+                        seamlessly today and tomorrow.
+                    </p>
+                    <button class="cta-button primary">Learn More About Us</button>
+                    <div class="icons">
+                        <a href="#"><i class="fa-brands fa-youtube fa-lg"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="media-section">
+                    <iframe width="560px" height="315" src="https://www.youtube.com/embed/52wAcNrkfQo?si=UbQBvsU1Hb-a-_7A" 
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+         </section>
+
+         <!--Our Solutions-->
+         <section id="our-solutions">
+            <h2>Our Solutions</h2>
+                 <p>Discover our core product categories and find the right technology for your business or home.</p>
+            <div class="solutions-container">
+                <!--Img Card 1-->
+                <div class="solution-card card-one">
+                    <div class="card-body">
+                        <h3>Surveillance Technology</h3>
+                        <p id="solution-text">
+                            From professional home kits to customised 
+                            solutions for major companies, our CCTV systems 
+                            keep you secure.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="cta-button primary">View Products</button>
+                    </div>
+                </div>
+
+                <!--Img Card 2-->
+                <div class="solution-card card-two">
+                    <div class="card-body">
+                        <h3>Batteries & Backup Power</h3>
+                        <p id="solution-text">
+                            Forbatt Batteries power banks, mines, server rooms, homes, 
+                            and more reliable energy wherever you need it.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="cta-button primary">View Products</button>
+                    </div>
+                </div>
+
+                <!--Img Card 3-->
+                <div class="solution-card card-three">
+                    <div class="card-body">
+                        <h3>Holographic Screen</h3>
+                        <p id="solution-text">
+                            Sleek, lightweight, and up to 90% transparent 
+                            for stunning glass wall displays.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="cta-button primary">View Products</button>
+                    </div>
+                </div>
+            </div>
+         </section>
+
+         <!--CTA Banner section-->
+         <!--hero-->
+        <section class="cta-banner">
+            <div class="cta-banner-content">
+                <h1>Power Your Business with the Right Solution</h1>
+                <p>Explore our trusted range of energy, surveillance, and security products tailored to your needs.</p>
+                <div class="button-container">
+                    <button class="cta-button accent">Explore Products</button>                 
+                </div>
+            </div>
+        </section>
+
+       <!-- Contact Form Section--> 
+        <section id="contact">
+            <h2>Trusted Technology, Powered by Forbatt SA</h2>
+            <p>Exclusive brands. Reliable solutions. A partner you can count on for energy, surveillance, and access control.</p>
+            <form id="applyForm">
+                <label>Full Name</label>
+                <input type="text" name="name" required>
+                <label>Email</label>
+                <input type="email" name="email" required>
+                <label>Contact No.</label>
+                <input type="text" name="tel" required>
+                <label>Company Name</label>
+                <input type="text" name="company" required>
+                <label>Reason for Contact</label>
+                <select name="course" required>
+                    <option value="">Select your contact reason</option>
+                    <option>Product Inquiry</option>
+                    <option>Reseller/Distributor Enquiry</option>
+                    <option>Technical Support</option>
+                    <option>Warranty/Returns</option>
+                    <option>Training Request</option>
+                </select>
+                <fieldset>
+                    <legend>How can we contact you?</legend>
+                    <label class="inline"><input type="radio" name="mode" value="Cell" required> Cell</label>
+                    <label class="inline"><input type="radio" name="mode" value="email" required> Email</label>
+                    </fieldset>
+                <button class="cta-button primary" type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <!--About Summary-->
+            <div class="footer-about-summary">
+                <div class="footer-logo">
+                    <img src="img/logo.webp" alt=" Forbatt SA Logo" srcset="">
+                </div>
+                <p class="summary-text">
+                    Forbatt SA delivers trusted energy, surveillance, and access 
+                    control solutions across South Africa. Innovation, quality, 
+                    and reliability powering businesses and homes nationwide.
+                </p>
+
+                <div class="icons">
+                    <a href="#"><i class="fa-brands fa-youtube fa-lg"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+                </div>
+            </div>
+
+            <!--Company Links-->
+            <div class="company-links">
+                <h4 class="company-link-heading">Company</h4>
+                <ul>
+                    <li class="quick-link"><a href="" class="quick-link-text">About</a></li>
+                    <li class="quick-link"><a href="" class="quick-link-text">Careers</a></li>
+                    <li class="quick-link"><a href="" class="quick-link-text">Contact</a></li>
+                    <li class="quick-link"><a href="" class="quick-link-text">News &amp; Updates</a></li>
+                </ul>
+            </div>
+            
+            <!--Products Links-->
+            <div class="company-links">
+                <h4 class="company-link-heading">Product</h4>
+                <ul>
+                    <li class="quick-link"><a href="" class="quick-link-text">Batteries &amp; Backup Power</a></li>
+                    <li class="quick-link"><a href="" class="quick-link-text">Surveillance Technology</a></li>
+                    <li class="quick-link"><a href="" class="quick-link-text">Access Control</a></li>
+                    <li class="quick-link"><a href="" class="quick-link-text">Featured Brands</a></li>
+                </ul>
+            </div>
+
+            <!--Support Links-->
+            <div class="company-links">
+                <h4 class="company-link-heading">Support</h4>
+                <ul>
+                    <li class="quick-link"><a href="" class="quick-link-text">Training &amp; Resources</a></li>
+                    <li class="quick-link"><a href="" class="quick-link-text">FAQs</a></li>
+                    <li class="quick-link"><a href="" class="quick-link-text">Downloads</a></li>
+                </ul>
+            </div>
+
+            <!--End Quick Links-->
+            <div class="copyright-section">
+                <p class="copyright-text">&copy; 2025 Forbatt. All Rights Reserved. Website designed and developed by <a href="https://www.linkedin.com/in/tebogo-masia-0ba12847/"  target="_blank"  class="designer-link">Tebogo Masia</a></p>
+            </div>
+        </div>
+    </footer>
+    <script>
+    function toggleMenu() {
+        const nav = document.getElementById('navLinks');
+        nav.classList.toggle('active');
+    }
+  </script>    
+</body>
+</html>

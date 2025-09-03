@@ -1,0 +1,741 @@
+/* -- Gobal Reset -- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color:#333;
+    background-color: #fff;
+}
+
+h1,
+h2,
+h3 {
+    margin-bottom: 10px;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* -- Navbar -- */
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+nav.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    transition: transform 0.3s ease-out;
+}
+
+nav.nav-links a:not(.cta-button):not(.primary) {
+  position: relative;
+}
+
+nav.nav-links a:not(.cta-button):not(.primary)::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #166644; 
+  transition: width 0.3s ease-in-out;
+}
+
+nav.nav-links a:not(.cta-button):not(.primary):hover::after {
+  width: 100%;
+}
+
+
+/* Parent Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  padding: 0;
+}
+
+/* First Level Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 200px;
+  flex-direction: column;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Submenu Item */
+.submenu-item {
+  position: relative;
+}
+
+.submenu-item > button {
+  background: none;
+  border: none;
+  padding: 10px 15px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* Submenu */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  z-index: 1001;
+  flex-direction: column;
+}
+
+.submenu-item:hover > .submenu {
+  display: block;
+}
+
+/* Submenu links */
+.submenu a {
+  padding: 10px 15px;
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+
+.submenu a:hover {
+  background-color: #f0f0f0;
+}
+
+
+/* -- Hamburger -- */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background: #000;
+    margin: 4px 0;
+    border-radius: 5px;
+}
+
+/* -- Hero -- */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5)),  url('../img/hero.webp') no-repeat center/cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.hero-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.cta-button {
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.primary {
+    background: #166644;
+    border: none;
+    color: #fff;
+}
+
+.secondary {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.accent {
+    background: red;
+    border: none;
+    color: #fff;  
+}
+
+/* -- Trusted brands section container -- */
+
+.trusted-brands {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    background: #fff;
+    padding: 1rem 0;
+}
+
+/* -- Inner track that scrolls -- */
+
+.trusted-brands-track {
+    display: inline-flex;                   
+    gap: 3rem;                              
+    animation: scroll 15s linear infinite;   
+}
+
+/* -- logo styling -- */
+
+.trusted-brands-logo img {
+    width: auto;            
+    height: 60px;           
+    object-fit: contain;    
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/*Best Seller Section*/
+
+#bestseller-section {
+    padding: 2rem;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+#bestseller-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+#bestseller-section p, 
+#about p,
+#our-solutions p,
+#contact p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+/* -- Card container -- */
+
+.bestsell-container {
+    display: flex;          
+    flex-wrap: wrap;        
+    gap: 1.5rem;            
+    justify-content: center;
+}
+
+/*-- Individual card -- */
+
+.bestsell-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(33.33% - 1.5rem);    
+    max-width: 320px;                   
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    overflow: hidden;                   
+    transition: transform 0.2s ease;    
+}
+
+.bestsell-card:hover {
+    transform: translateY(-5px);
+}
+
+/* -- Card image section -- */
+
+.card-img img {
+    height: 180px;
+    object-fit: cover;
+}
+
+/* -- Card body section -- */
+
+.card-body {
+    padding: 15px;
+    text-align: left;
+}
+
+.card-body h3 {
+    margin-bottom: 4px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.card-body h4 {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    color: #111;
+}
+
+.card-body #text {
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.card-body ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    list-style: disc;
+}
+
+.card-body ul li {
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+    color: #444;
+}
+
+.card-footer {
+    padding: 15px;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* -- About Forbatt summary sections -- */
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.text-section {
+    flex: 1 1 40%;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.icons {
+    margin-top: 10px;
+}
+
+.media-section {
+    flex: 1 1 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.media-section iframe {
+    width: 100%;            
+    max-width: 560px;       
+    aspect-ratio: 16/9;     
+    border-radius: 8px; 
+}
+
+/* -- Our solutions --*/
+
+.solutions-container {
+    display: flex;          
+    flex-wrap: wrap;        
+    gap: 1.5rem;            
+    justify-content: center;
+}
+
+.solution-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1 1 calc(33.33% - 1.5rem);
+    max-width: 320px;
+    border-radius: 8px;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    transition: transform 0.2s ease;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.solution-card:hover {
+    transform: translateY(-5px);
+}
+
+.solution-card::before {
+    content: "";
+    position:absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.solution-card .card-body {
+    text-align: center;
+}
+
+.solution-card .card-body h3 {
+    color: #fff;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.solution-card .card-body #solution-text {
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.solution-card .card-body,
+.solution-card .card-footer {
+    position: relative;
+    z-index: 1;
+    padding: 1rem
+}
+
+.card-footer {
+    margin-top: auto;
+}
+
+/* -- Background assignments -- */
+
+.card-one {
+    background: url('../img/solutions/pic-one.jpg') no-repeat center/cover;
+}
+
+.card-two {
+    background: url('../img/solutions/pic-two.jpg') no-repeat center/cover;
+}
+
+.card-three {
+    background: url('../img/solutions/pic-three.jpg') no-repeat center/cover;
+}
+
+/* -- CTA Banner section -- */
+
+.cta-banner {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.cta-banner-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contact/ form */
+form {
+    max-width: 500px;
+    margin: auto;
+    text-align: left;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form label.inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: 5px 10px 5px 0;
+}
+
+form input[type="text"],
+form input[type="email"],
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+form fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+form button {
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* -- footer -- */
+
+footer {
+    background-color: #000;  
+    color: #fff;              
+    padding: 3rem 1.5rem;
+    font-size: 0.9rem;
+}
+
+footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.footer-about-summary {
+    flex: 1 1 250px;
+    max-width: 300px;
+}
+
+.footer-about-summary .footer-logo img {
+    max-width: 200px;
+    margin-bottom: 1rem;
+}
+
+.footer-about-summary .summary-text {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+.footer-about-summary .icons a {
+    margin-right: 0.8rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.footer-about-summary .icons a:hover {
+    color: #00a86b;
+}
+
+.company-links {
+    flex: 1 1 180px;
+}
+
+.company-link-heading {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.company-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.quick-link {
+    margin-bottom: 0.5rem;
+}
+
+.quick-link-text {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.quick-link-text:hover {
+    color: #fff;
+}
+
+.copyright-section {
+    flex: 1 1 100%;
+    margin-top: 2rem;
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 1rem;
+}
+
+.copyright-text {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.designer-link {
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.designer-link:hover {
+    color: #00a86b;
+}
+
+
+/* -- Responsive Layout -- */
+@media (max-width: 768px) {
+
+
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-summary, 
+    .company-links {
+        max-width: 100%;
+    }
+
+    .about-summary .icons {
+        justify-content: center;
+    }
+
+    .trusted-brands-logo img {
+        height: 40px;  
+    }
+
+    .trusted-brands-track {
+        gap: 2rem;
+    }
+
+    .bestsell-card,
+    .solution-card {
+        flex: 1 1 100%;  
+        max-width: none;
+    }
+
+    nav.nav-links {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        padding: 20px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    nav.nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text-section, 
+    .media-section {
+        flex: 1 1 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .text-section {
+        margin-bottom: 1.5rem;
+    }
+
+    form button {
+        display: block;
+        margin: 0 auto;
+        width: fit-content;
+    }
+}
